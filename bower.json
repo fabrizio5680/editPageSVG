@@ -1,0 +1,25 @@
+{
+    "name": "editPageSVG",
+    "version": "1.0.0",
+    "homepage": "https://github.com/fabrizio5680/editPageSVG",
+    "authors": [
+        "Fabrizio Bottaro <fabrizio5680@gmail.com>"
+    ],
+    "description": "edit page svg",
+    "main": [
+        "/lib/jquery.background.animate.js",
+        "/lib/jquery.color.js",
+        "/lib/jquery.limiter.js",
+        "/lib/jquery.svg.1.4.5/jquery.svg.min.js",
+        "/lib/jquery.svg.1.4.5/jquery.svgdom.min.js"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        ".idea"
+    ]
+}
