@@ -11,7 +11,8 @@
         "jquery.color.js",
         "jquery.limiter.js",
         "jquery.svg.min.js",
-        "jquery.svgdom.min.js"
+        "jquery.svgdom.min.js",
+        "jquery.min.js"
     ],
     "license": "MIT",
     "ignore": [
