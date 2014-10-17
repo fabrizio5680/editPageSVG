@@ -7,13 +7,14 @@
     ],
     "description": "edit page svg",
     "main": [
+        "jquery.min.js",
         "jquery.background.animate.js",
         "jquery.color.js",
         "jquery.limiter.js",
         "jquery.svg.min.js",
         "jquery.svgdom.min.js",
-        "jquery.svgpan.js",
-        "jquery.min.js"
+        "jquery.svgpan.js"
+        
     ],
     "license": "MIT",
     "ignore": [
