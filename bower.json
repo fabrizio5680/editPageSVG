@@ -7,12 +7,12 @@
     ],
     "description": "edit page svg",
     "main": [
-        "jquery.min.js",
+        "jquery.1.7.2.js",
         "jquery.background.animate.js",
         "jquery.color.js",
         "jquery.limiter.js",
-        "jquery.svg.min.js",
-        "jquery.svgdom.min.js",
+        "jquery.svg.js",
+        "jquery.svgdom.js",
         "jquery.svgpan.js"
         
     ],
