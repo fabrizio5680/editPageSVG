@@ -1391,4 +1391,4 @@
 // Singleton primary SVG interface
     $.svg = new SVGManager();
 
-})(oQuery);
+}(window.oQuery));

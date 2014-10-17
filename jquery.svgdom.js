@@ -403,4 +403,4 @@
 
      */
 
-})(oQuery);
+}(window.oQuery));

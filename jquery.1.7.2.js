@@ -9383,9 +9383,4 @@
 // Expose jQuery to the global object
     window.oQuery = window.$old = jQuery;
 
-
-
-
-})( window );/**
- * Created by fabrizio on 17/10/2014.
- */
+}(window));

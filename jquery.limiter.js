@@ -115,4 +115,4 @@
             }
         }
     };
-})(oQuery);
+}(window.oQuery));

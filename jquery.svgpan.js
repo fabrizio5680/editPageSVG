@@ -375,4 +375,4 @@
         }
 
     }
-})(oQuery);
+}(window.oQuery));
