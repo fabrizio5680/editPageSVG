@@ -11,7 +11,7 @@
         "jquery.background.animate.js",
         "jquery.color.js",
         "jquery.limiter.js",
-        "jquery.svg.css"
+        "jquery.svg.css",
         "jquery.svg.js",
         "jquery.svgdom.js",
         "jquery.svgpan.js"
