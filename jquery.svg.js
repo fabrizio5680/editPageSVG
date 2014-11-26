@@ -1024,16 +1024,16 @@
                 }
             };
             if (url.match('<svg')) { // Inline SVG
-                loadSVG($.browser.msie ? loadXML4IE(url) :
-                    new DOMParser().parseFromString(url, 'text/xml'));
+                loadSVG($.parseXML(wrapper.sanitizeSvgString(url)));
             }
             else { // Remote SVG
-                $.ajax({url: url, dataType: ($.browser.msie ? 'text' : 'xml'),
+                $.ajax({url: url, dataType: 'text',
                     success: function(xml) {
-                        loadSVG($.browser.msie ? loadXML4IE(xml) : xml);
+                        loadSVG($.parseXML(wrapper.sanitizeSvgString(xml)));
                     }, error: function(http, message, exc) {
                         reportError(message + (exc ? ' ' + exc.message : ''));
-                    }});
+                    }}
+                );
             }
             return this;
         },
@@ -1108,6 +1108,22 @@
                 }
             }
             return svgDoc;
+        },
+        
+        sanitizeSvgString: function (string) {
+            try {
+                string = string.replace(/(original-href=")[^"]*(")/g, '$1$2');
+                string = string.replace(/xmlns="http:\/\/www\.w3\.org\/2000\/svg"/g, '');
+                string = string.replace(/xmlns:xlink="http:\/\/www\.w3\.org\/1999\/xlink"/g, '');
+                string = string.replace(/xmlns:xml="http:\/\/www\.w3\.org\/XML\/1998\/namespace"/g, '');
+                string = string.replace(/xlink:href/g, 'xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href');
+                string = string.replace(/<svg/g, '<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"');
+                string = string.replace(/xmlns:NS1=""/g, '');
+                string = string.replace(/NS1:/g, '');
+            } catch (e) {
+                return '';
+            }
+            return string;
         }
     });
 
